@@ -107,7 +107,7 @@ body {
 }
 
 .product-card button:hover {
-    background-color: #7dd019;
+    background-color: #f4cdcd;
 }
 .cart {
     margin-top: 20px;
@@ -128,7 +128,7 @@ body {
 }
 
 button {
-    background-color: #4CAF50;
+    background-color: #f4cdcd;
     color: white;
     padding: 10px 15px;
     border: none;
@@ -136,7 +136,7 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #d6b9b9;
 }
 
 .hero-banner {
@@ -186,44 +186,88 @@ button:hover {
 .cta-button:hover {
     background-color: #d6b9b9;
 }
-/* Estilos para la lista de navegación */
-ul {
-    list-style: none; /* Elimina los puntos de la lista */
-    padding: 0; /* Elimina el relleno */
-    margin: 0; /* Elimina los márgenes */
-    display: flex; /* Usa Flexbox para alinear los elementos en fila */
-    gap: 30px; /* Espaciado entre los elementos */
+
+/* Estilo para el carrusel */
+.carousel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-/* Estilos para los enlaces */
-.nav-link {
-    text-decoration: none; /* Elimina el subrayado */
-    color: #333; /* Color gris oscuro para los enlaces */
-    font-weight: 500; /* Peso de fuente normal */
-    font-size: 1.1rem; /* Tamaño de fuente ligeramente mayor */
-    position: relative; /* Necesario para el subrayado animado */
-    padding-bottom: 3px; /* Espacio debajo del texto para el subrayado */
-    transition: color 0.3s ease-in-out; /* Transición suave para el cambio de color */
+.carousel-button {
+    background-color: #f4cdcd;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: 5px;
 }
 
-/* Subrayado animado */
-.nav-link::after {
-    content: ''; /* Necesario para crear el subrayado */
+.carousel-button:disabled {
+    background-color: #d6b9b9;
+    cursor: not-allowed;
+}
+
+.carousel-track {
+    display: flex;
+    overflow: hidden;
+    flex: 1;
+    gap: 15px;
+}
+
+.carousel-track .product-card {
+    flex: 0 0 calc(25% - 50px); /* 4 productos por fila */
+}
+header {
+    display: flex;
+    justify-content: space-between; /* Separa el título y el menú */
+    align-items: center; /* Alinea verticalmente los elementos */
+    padding: 10px 20px;
+    background-color: #f5f5f5; /* Fondo claro (ajústalo a tu gusto) */
+    border-bottom: 1px solid #ddd; /* Línea inferior opcional */
+}
+
+header h1 {
+    margin: 0; /* Elimina espacios por defecto */
+    font-size: 1.5rem; /* Ajusta el tamaño del título */
+    color: #333;
+}
+
+header nav ul {
+    display: flex; /* Alinea los ítems del menú en una fila */
+    list-style: none; /* Quita los puntos de lista */
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin-left: 20px; /* Espaciado entre los enlaces */
+}
+
+header nav ul .nav-link {
+    position: relative; /* Necesario para usar el pseudo-elemento */
+    text-decoration: none; /* Sin subrayado inicial */
+    color: #333; /* Color del texto */
+    font-size: 1rem; /* Ajusta el tamaño de los enlaces */
+    transition: color 0.3s ease; /* Animación para el color del texto */
+}
+
+header nav ul .nav-link::after {
+    content: ''; /* Pseudo-elemento vacío */
     position: absolute;
-    bottom: 0;
     left: 0;
-    width: 0;
-    height: 2px;
+    bottom: -2px; /* Ajusta la posición del subrayado */
+    width: 0; /* El subrayado comienza invisible */
+    height: 2px; /* Grosor de la línea */
     background-color: #d6b9b9; /* Color del subrayado */
-    transition: width 0.3s ease-in-out; /* Animación para el subrayado */
+    transition: width 0.3s ease; /* Animación para el subrayado */
 }
 
-/* Efecto al pasar el ratón */
-.nav-link:hover {
-    color: #d6b9b9; /* Cambia el color del texto */
+header nav ul .nav-link:hover {
+    color: #d6b9b9; /* Cambia el color del texto al pasar el mouse */
 }
 
-/* Animación de subrayado en hover */
-.nav-link:hover::after {
-    width: 100%; /* El subrayado se expande al 100% */
+header nav ul .nav-link:hover::after {
+    width: 100%; /* El subrayado se extiende completamente */
 }
