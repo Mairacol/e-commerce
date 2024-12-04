@@ -283,3 +283,46 @@ header nav ul .nav-link:hover::after {
     top: -5px;
     right: -10px;
 }
+.quantity-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 5px;
+    width: 120px;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.quantity-btn {
+    background-color: #fff;
+    border: none;
+    font-size: 18px;
+    color: #555;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    border-radius: 50%;
+}
+
+.quantity-btn:hover {
+    background-color: #f1f1f1;
+}
+
+.quantity-input {
+    width: 30px;
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    font-size: 18px;
+    color: #333;
+    outline: none;
+}
+
+.quantity-input::-webkit-outer-spin-button,
+.quantity-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+

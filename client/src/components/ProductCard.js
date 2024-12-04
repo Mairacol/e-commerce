@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const addToCart = (product, updateCartCount) => {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -24,9 +25,11 @@ const ProductCard = ({ product , updateCartCount}) => {
 
     return (
         <div className="product-card">
+             <Link to={`/product/${product.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
             <img src={product.image} alt={product.title} />
             <h2 className={isLongTitle ? 'overflow-title' : ''}>{product.title}</h2>
             <p>${product.price.toFixed(2)}</p>
+            </Link>
             <button onClick={() => addToCart(product, updateCartCount)}>Añadir al carrito</button>
         </div>
     );

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import ProductsPage from './pages/ProductsPage'; // Página de productos
 import CartPage from './pages/CartPage'; // Página del carrito
 import Home from './pages/Home'; // Página home '
+import ProductDetailPage from './pages/ProductDetailPage'; 
 import './styles.css';
 
 const App = () => {
@@ -37,6 +38,10 @@ const App = () => {
                   element={<CartPage setCartCount={setCartCount} />} // Pasa setCartCount también a CartPage
               />
               <Route path="/home" element={<Home />} />
+              <Route 
+    path="/product/:productId" 
+    element={<ProductDetailPage updateCartCount={setCartCount} />} // Aquí pasas setCartCount a ProductDetailPage
+/>
                 
             </Routes>
         </Router>
