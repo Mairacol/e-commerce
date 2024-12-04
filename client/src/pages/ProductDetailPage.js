@@ -5,33 +5,33 @@ import ReactSelect from 'react-select';
 const customStyles = {
     control: (base) => ({
         ...base,
-        borderColor: '#d6b9b9',  // Usamos el color solicitado para el borde
+        borderColor: '#d6b9b9',  
         borderRadius: '8px',
         padding: '8px',
         fontSize: '16px',
-        boxShadow: 'none',  // Para evitar el borde de enfoque por defecto
+        boxShadow: 'none',  
         '&:hover': {
-            borderColor: '#d6b9b9',  // Mantener el color al pasar el mouse
+            borderColor: '#d6b9b9',  
         },
     }),
     option: (base) => ({
         ...base,
         padding: '10px',
         fontSize: '16px',
-        backgroundColor: '#fff',  // Color de fondo de las opciones
-        color: '#333',  // Color del texto de las opciones
+        backgroundColor: '#fff',  
+        color: '#333',  
         '&:hover': {
-            backgroundColor: '#d6b9b9',  // Color de fondo al pasar el mouse sobre las opciones
-            color: '#fff',  // Color del texto al pasar el mouse sobre las opciones
+            backgroundColor: '#d6b9b9', 
+            color: '#fff', 
         },
     }),
     singleValue: (base) => ({
         ...base,
-        color: '#333',  // Color del texto seleccionado
+        color: '#333',  
     }),
     placeholder: (base) => ({
         ...base,
-        color: '#d6b9b9',  // Color del texto del placeholder
+        color: '#d6b9b9', 
     }),
 };
 
@@ -61,7 +61,7 @@ const addToCart = (product, selectedSize, quantity, updateCartCount) => {
         updateCartCount(totalItems);  // Pasa el total de productos al App.js
     }
 
-    // Mostrar un mensaje de éxito
+    
     alert('Producto agregado al carrito');
 };
 
@@ -80,7 +80,7 @@ const ProductDetailPage = ({ updateCartCount }) => {
 
             // Si el producto es de ropa, agregamos las tallas
             if (data.category === "men's clothing" || data.category === "women's clothing") {
-                setSizes(['S', 'M', 'L', 'XL']); // Tallas disponibles para ropa
+                setSizes(['S', 'M', 'L', 'XL']); // Tallas 
             }
         };
 
