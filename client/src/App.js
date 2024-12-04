@@ -1,8 +1,8 @@
 import React, { useState }  from 'react'; 
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import ProductsPage from './pages/ProductsPage'; // Página de productos
-import CartPage from './pages/CartPage'; // Página del carrito
-import Home from './pages/Home'; // Página home '
+import ProductsPage from './pages/ProductsPage'; 
+import CartPage from './pages/CartPage'; 
+import Home from './pages/Home'; 
 import ProductDetailPage from './pages/ProductDetailPage'; 
 import './styles.css';
 
@@ -21,7 +21,7 @@ const App = () => {
     <li>
         <Link to="/cart" className="nav-link">
             <i className="fas fa-shopping-cart"></i>
-            <span className="cart-count">{cartCount}</span> {/* Ejemplo con 3 productos */}
+            <span className="cart-count">{cartCount}</span> 
         </Link>
     </li>
 </ul>
@@ -40,7 +40,7 @@ const App = () => {
               <Route path="/home" element={<Home />} />
               <Route 
     path="/product/:productId" 
-    element={<ProductDetailPage updateCartCount={setCartCount} />} // Aquí pasas setCartCount a ProductDetailPage
+    element={<ProductDetailPage updateCartCount={setCartCount} />} // Aquí pasa setCartCount a ProductDetailPage
 />
                 
             </Routes>
