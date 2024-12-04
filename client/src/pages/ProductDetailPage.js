@@ -1,5 +1,39 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import ReactSelect from 'react-select';
+
+const customStyles = {
+    control: (base) => ({
+        ...base,
+        borderColor: '#d6b9b9',  // Usamos el color solicitado para el borde
+        borderRadius: '8px',
+        padding: '8px',
+        fontSize: '16px',
+        boxShadow: 'none',  // Para evitar el borde de enfoque por defecto
+        '&:hover': {
+            borderColor: '#d6b9b9',  // Mantener el color al pasar el mouse
+        },
+    }),
+    option: (base) => ({
+        ...base,
+        padding: '10px',
+        fontSize: '16px',
+        backgroundColor: '#fff',  // Color de fondo de las opciones
+        color: '#333',  // Color del texto de las opciones
+        '&:hover': {
+            backgroundColor: '#d6b9b9',  // Color de fondo al pasar el mouse sobre las opciones
+            color: '#fff',  // Color del texto al pasar el mouse sobre las opciones
+        },
+    }),
+    singleValue: (base) => ({
+        ...base,
+        color: '#333',  // Color del texto seleccionado
+    }),
+    placeholder: (base) => ({
+        ...base,
+        color: '#d6b9b9',  // Color del texto del placeholder
+    }),
+};
 
 // Función para agregar productos al carrito
 const addToCart = (product, selectedSize, quantity, updateCartCount) => {
@@ -54,7 +88,10 @@ const ProductDetailPage = ({ updateCartCount }) => {
     }, [productId]);
 
     if (!product) return <p>Cargando detalles...</p>; // Si el producto no se ha cargado, mostramos un mensaje
-
+    const sizeOptions = sizes.map(size => ({
+        value: size,
+        label: size,
+    }));
     return (
         <div className="product-detail">
             <h2>{product.title}</h2>
@@ -66,12 +103,13 @@ const ProductDetailPage = ({ updateCartCount }) => {
             {(product.category === "men's clothing" || product.category === "women's clothing") && (
                 <div>
                     <label>Talle:</label>
-                    <select value={selectedSize} onChange={(e) => setSelectedSize(e.target.value)}>
-                        <option value="">Seleccionar talla</option>
-                        {sizes.map((size, index) => (
-                            <option key={index} value={size}>{size}</option>
-                        ))}
-                    </select>
+                    <ReactSelect
+                        value={selectedSize ? { value: selectedSize, label: selectedSize } : null}
+                        onChange={(selectedOption) => setSelectedSize(selectedOption.value)}
+                        options={sizeOptions}
+                        placeholder="Seleccionar talla"
+                        styles={customStyles}
+                    />
                 </div>
             )}
 
