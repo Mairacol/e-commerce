@@ -163,7 +163,7 @@ button:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgb(0, 0, 0); /* Cambia a blanco para mayor contraste */
+    color: rgb(0, 0, 0); 
     text-align: center;
 }
 
@@ -230,61 +230,61 @@ button:hover {
 }
 
 .carousel-track .product-card {
-    flex: 0 0 calc(25% - 50px); /* 4 productos por fila */
+    flex: 0 0 calc(25% - 50px); 
     height: 15vw;
 }
 header {
     display: flex;
-    justify-content: space-between; /* Separa el título y el menú */
-    align-items: center; /* Alinea verticalmente los elementos */
+    justify-content: space-between; 
+    align-items: center;
     padding: 10px 20px;
-    background-color: #f5f5f5; /* Fondo claro (ajústalo a tu gusto) */
+    background-color: #f5f5f5; 
 }
 
 header h1 {
-    margin: 0; /* Elimina espacios por defecto */
-    font-size: 2rem; /* Ajusta el tamaño del título */
+    margin: 0;
+    font-size: 2rem;
     color: #333;
     font-weight: bold;
 }
 
 header nav ul {
-    display: flex; /* Alinea los ítems del menú en una fila */
-    list-style: none; /* Quita los puntos de lista */
+    display: flex;
+    list-style: none; 
     margin: 0;
     padding: 0;
 }
 
 header nav ul li {
-    margin-left: 20px; /* Espaciado entre los enlaces */
+    margin-left: 20px; 
 }
 
 header nav ul .nav-link {
-    position: relative; /* Necesario para usar el pseudo-elemento */
-    text-decoration: none; /* Sin subrayado inicial */
-    color: #333; /* Color del texto */
-    font-size: 1.5rem; /* Ajusta el tamaño de los enlaces */
-    transition: color 0.3s ease; /* Animación para el color del texto */
+    position: relative; 
+    text-decoration: none; 
+    color: #333; 
+    font-size: 1.5rem; 
+    transition: color 0.3s ease; 
     font-weight: bold;
 }
 
 header nav ul .nav-link::after {
-    content: ''; /* Pseudo-elemento vacío */
+    content: ''; 
     position: absolute;
     left: 0;
-    bottom: -2px; /* Ajusta la posición del subrayado */
-    width: 0; /* El subrayado comienza invisible */
-    height: 2px; /* Grosor de la línea */
-    background-color: #d6b9b9; /* Color del subrayado */
-    transition: width 0.3s ease; /* Animación para el subrayado */
+    bottom: -2px; 
+    width: 0; 
+    height: 2px; 
+    background-color: #d6b9b9; 
+    transition: width 0.3s ease; 
 }
 
 header nav ul .nav-link:hover {
-    color: #d6b9b9; /* Cambia el color del texto al pasar el mouse */
+    color: #d6b9b9; 
 }
 
 header nav ul .nav-link:hover::after {
-    width: 100%; /* El subrayado se extiende completamente */
+    width: 100%;
 }
 .cart-count {
     background-color: rgb(255, 255, 255);
