@@ -4,7 +4,7 @@ const Cart = () => {
     const [cart, setCart] = useState([]);
 
     useEffect(() => {
-        // Cargar el carrito desde localStorage
+        // Carga el carrito desde localStorage
         const storedCart = JSON.parse(localStorage.getItem('cart')) || [];
         setCart(storedCart);
     }, []);

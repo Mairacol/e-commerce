@@ -34,7 +34,6 @@ const Home = () => {
 
     return (
         <div className="home">
-            {/* Banner de bienvenida */}
             <section className="hero-banner">
                 <div className="hero-content">
                     <h1 className="hero-title">¡Bienvenido a nuestra tienda!</h1>
@@ -59,7 +58,7 @@ const Home = () => {
                             <ProductCard 
                                 key={product.id} 
                                 product={product} 
-                                isFeatured={true}  // Asume que el primer producto es destacado
+                                isFeatured={true}  
                                 className="home-product-card" 
                             />
                         ))}
