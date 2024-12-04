@@ -229,7 +229,7 @@ header {
 
 header h1 {
     margin: 0; /* Elimina espacios por defecto */
-    font-size: 1.5rem; /* Ajusta el tamaño del título */
+    font-size: 2rem; /* Ajusta el tamaño del título */
     color: #333;
     font-weight: bold;
 }
@@ -249,7 +249,7 @@ header nav ul .nav-link {
     position: relative; /* Necesario para usar el pseudo-elemento */
     text-decoration: none; /* Sin subrayado inicial */
     color: #333; /* Color del texto */
-    font-size: 1rem; /* Ajusta el tamaño de los enlaces */
+    font-size: 1.5rem; /* Ajusta el tamaño de los enlaces */
     transition: color 0.3s ease; /* Animación para el color del texto */
     font-weight: bold;
 }
@@ -273,8 +273,8 @@ header nav ul .nav-link:hover::after {
     width: 100%; /* El subrayado se extiende completamente */
 }
 .cart-count {
-    background-color: red;
-    color: white;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-size: 0.8rem;
     font-weight: bold;
     border-radius: 50%;
