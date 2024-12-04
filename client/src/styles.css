@@ -218,6 +218,7 @@ button:hover {
 
 .carousel-track .product-card {
     flex: 0 0 calc(25% - 50px); /* 4 productos por fila */
+    height: 15vw;
 }
 header {
     display: flex;

@@ -55,8 +55,13 @@ const Home = () => {
                         &#8592;
                     </button>
                     <div className="carousel-track">
-                        {products.slice(startIndex, startIndex + productsPerPage).map(product => (
-                            <ProductCard key={product.id} product={product} />
+                        {products.slice(startIndex, startIndex + productsPerPage).map((product, index) => (
+                            <ProductCard 
+                                key={product.id} 
+                                product={product} 
+                                isFeatured={true}  // Asume que el primer producto es destacado
+                                className="home-product-card" 
+                            />
                         ))}
                     </div>
                     <button 

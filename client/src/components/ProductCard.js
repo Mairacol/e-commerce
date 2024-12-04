@@ -19,18 +19,20 @@ const addToCart = (product, updateCartCount) => {
     }
 };
 
-
-const ProductCard = ({ product , updateCartCount}) => {
+const ProductCard = ({ product, updateCartCount, isFeatured }) => {
     const isLongTitle = product.title.split(' ').length > 10; // Para títulos largos
 
     return (
         <div className="product-card">
-             <Link to={`/product/${product.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
-            <img src={product.image} alt={product.title} />
-            <h2 className={isLongTitle ? 'overflow-title' : ''}>{product.title}</h2>
-            <p>${product.price.toFixed(2)}</p>
+            <Link to={`/product/${product.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                <img src={product.image} alt={product.title} />
+                <h2 className={isLongTitle ? 'overflow-title' : ''}>{product.title}</h2>
+                <p>${product.price.toFixed(2)}</p>
             </Link>
-            <button onClick={() => addToCart(product, updateCartCount)}>Añadir al carrito</button>
+            {/* Solo mostrar el botón si el producto no es destacado */}
+            {!isFeatured && (
+                <button onClick={() => addToCart(product, updateCartCount)}>Añadir al carrito</button>
+            )}
         </div>
     );
 };
