@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const CartPage = () => {
+const CartPage = ({ setCartCount }) => {
     const [cart, setCart] = useState([]);
 
     useEffect(() => {
@@ -13,12 +13,13 @@ const CartPage = () => {
         const updatedCart = cart.filter(item => item.id !== id);
         localStorage.setItem('cart', JSON.stringify(updatedCart));
         setCart(updatedCart);
+        setCartCount(updatedCart.length);
     };
 
     const getTotalPrice = () => {
         return cart.reduce((total, product) => total + product.price, 0).toFixed(2);
     };
-
+    
     return (
         <div className="cart">
             <h2>Carrito de Compras</h2>

@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import ProductCard from '../components/ProductCard';
 
-const ProductsPage = () => {
+const ProductsPage = ({ setCartCount }) => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        // Obtener productos desde la API
         const fetchProducts = async () => {
             const response = await fetch('https://fakestoreapi.com/products');
             const data = await response.json();
@@ -18,7 +17,11 @@ const ProductsPage = () => {
     return (
         <div className="products-grid">
             {products.map(product => (
-                <ProductCard key={product.id} product={product} />
+                <ProductCard 
+                key={product.id} 
+                product={product} 
+                updateCartCount={setCartCount} // Pasamos la función para actualizar el contador
+            />
             ))}
         </div>
     );

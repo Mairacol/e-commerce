@@ -225,13 +225,13 @@ header {
     align-items: center; /* Alinea verticalmente los elementos */
     padding: 10px 20px;
     background-color: #f5f5f5; /* Fondo claro (ajústalo a tu gusto) */
-    border-bottom: 1px solid #ddd; /* Línea inferior opcional */
 }
 
 header h1 {
     margin: 0; /* Elimina espacios por defecto */
     font-size: 1.5rem; /* Ajusta el tamaño del título */
     color: #333;
+    font-weight: bold;
 }
 
 header nav ul {
@@ -251,6 +251,7 @@ header nav ul .nav-link {
     color: #333; /* Color del texto */
     font-size: 1rem; /* Ajusta el tamaño de los enlaces */
     transition: color 0.3s ease; /* Animación para el color del texto */
+    font-weight: bold;
 }
 
 header nav ul .nav-link::after {
@@ -270,4 +271,15 @@ header nav ul .nav-link:hover {
 
 header nav ul .nav-link:hover::after {
     width: 100%; /* El subrayado se extiende completamente */
+}
+.cart-count {
+    background-color: red;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 0.2rem 0.5rem;
+    position: absolute;
+    top: -5px;
+    right: -10px;
 }
