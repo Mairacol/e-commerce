@@ -33,12 +33,12 @@ body {
     border-radius: 8px;
     text-align: center;
     padding: 15px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Sombras suaves */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column; /* Organiza el contenido en columna */
     justify-content: space-between; /* Espacia uniformemente */
-    height: 350px; /* Altura fija para uniformidad */
+    height: 300px; /* Altura fija para uniformidad */
 }
 
 /* Image Container */
@@ -105,22 +105,6 @@ body {
     margin-bottom: 15px;
 }
 
-/* Add to Cart Button */
-.product-card button {
-    background-color: #d6b9b9;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: bold;
-    transition: background-color 0.2s ease;
-}
-
-.product-card button:hover {
-    background-color: #f4cdcd;
-}
 .cart {
     margin-top: 20px;
     padding: 20px;
