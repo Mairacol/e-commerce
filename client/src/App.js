@@ -13,11 +13,11 @@ const App = () => {
         <Router>
             <header>
                 <Link to="/home" style={{ textDecoration: 'none', color: 'inherit' }}>
-                    <h1>Mi Tienda</h1>
+                    <h1>My Store</h1>
                 </Link>
                 <nav>
                 <ul>
-    <li><Link to="/" className="nav-link">Productos</Link></li>
+    <li><Link to="/" className="nav-link">Products</Link></li>
     <li>
         <Link to="/cart" className="nav-link">
             <i className="fas fa-shopping-cart"></i>

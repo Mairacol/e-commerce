@@ -87,7 +87,7 @@ const ProductDetailPage = ({ updateCartCount }) => {
         fetchProduct();
     }, [productId]);
 
-    if (!product) return <p>Cargando detalles...</p>; // Si el producto no se ha cargado, mostramos un mensaje
+    if (!product) return <p>Loading details...</p>; // Si el producto no se ha cargado, mostramos un mensaje
     const sizeOptions = sizes.map(size => ({
         value: size,
         label: size,
@@ -102,12 +102,12 @@ const ProductDetailPage = ({ updateCartCount }) => {
             {/* Si el producto es de ropa, mostramos el selector de talle */}
             {(product.category === "men's clothing" || product.category === "women's clothing") && (
                 <div>
-                    <label>Talle:</label>
+                    <label>Size:</label>
                     <ReactSelect
                         value={selectedSize ? { value: selectedSize, label: selectedSize } : null}
                         onChange={(selectedOption) => setSelectedSize(selectedOption.value)}
                         options={sizeOptions}
-                        placeholder="Seleccionar talla"
+                        placeholder="Select size"
                         styles={customStyles}
                     />
                 </div>
@@ -132,7 +132,7 @@ const ProductDetailPage = ({ updateCartCount }) => {
                 onClick={() => addToCart(product, selectedSize, quantity, updateCartCount)}
                 disabled={!selectedSize && (product.category === "men's clothing" || product.category === "women's clothing")}
             >
-                Añadir al carrito
+                Add to cart
             </button>
         </div>
     );

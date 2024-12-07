@@ -36,15 +36,15 @@ const Home = () => {
         <div className="home">
             <section className="hero-banner">
                 <div className="hero-content">
-                    <h1 className="hero-title">¡Bienvenido a nuestra tienda!</h1>
-                    <p className="hero-subtitle">Explora las últimas novedades en moda</p>
-                    <Link to="/" className="cta-button">Ver productos</Link>
+                    <h1 className="hero-title">¡Welcome!</h1>
+                    <p className="hero-subtitle">Explore the latest news</p>
+                    <Link to="/" className="cta-button">See Products</Link>
                 </div>
             </section>
 
             {/* Carrusel de productos */}
             <div id="productos" className="product-list">
-                <h2>Productos Destacados</h2>
+                <h2>Featured Products </h2>
                 <div className="carousel">
                     <button 
                         className="carousel-button prev" 
