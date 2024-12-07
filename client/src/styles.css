@@ -34,11 +34,17 @@ body {
     text-align: center;
     padding: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Sombras suaves */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
     display: flex;
     flex-direction: column; /* Organiza el contenido en columna */
     justify-content: space-between; /* Espacia uniformemente */
     height: 300px; /* Altura fija para uniformidad */
+}
+
+/* Efecto hover */
+.product-card:hover {
+    transform: translateY(-5px) scale(1.02); /* Sutil levantamiento y aumento */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Sombra más intensa */
 }
 
 /* Image Container */
