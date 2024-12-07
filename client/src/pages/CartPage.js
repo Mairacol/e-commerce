@@ -66,7 +66,7 @@ const CartPage = ({ setCartCount }) => {
 
     return (
         <div className="cart">
-            <h2>Carrito de Compras</h2>
+            <h2>Shopping Cart</h2>
             <ul>
                 {cart.length > 0 ? (
                     cart.map(product => (
@@ -74,15 +74,15 @@ const CartPage = ({ setCartCount }) => {
                             <img src={product.image} alt={product.title} width={50} />
                             <span>{product.title}</span>
                             <span>${product.price.toFixed(2)} x {product.quantity}</span>
-                            <button onClick={() => handleRemove(product.id)}>Eliminar</button>
+                            <button onClick={() => handleRemove(product.id)}>Delete</button>
                         </li>
                     ))
                 ) : (
-                    <p>No hay productos en el carrito.</p>
+                    <p>There are no products in the cart.</p>
                 )}
             </ul>
             <div>
-                <h3>Total: ${getTotalPrice()}</h3>
+                <h3>Total to pay: ${getTotalPrice()}</h3>
             </div>
         </div>
     );
