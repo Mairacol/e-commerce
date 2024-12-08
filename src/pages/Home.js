@@ -38,7 +38,7 @@ const Home = () => {
                 <div className="hero-content">
                     <h1 className="hero-title">¡Welcome!</h1>
                     <p className="hero-subtitle">Explore the latest news</p>
-                    <Link to="/" className="cta-button">See Products</Link>
+                    <Link to="/products" className="cta-button">See Products</Link>
                 </div>
             </section>
 
