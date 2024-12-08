@@ -1,9 +1,9 @@
 import React, { useState } from 'react'; 
-import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom'; 
-import ProductsPage from './pages/ProductsPage'; 
+import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
 import CartPage from './pages/CartPage'; 
 import Home from './pages/Home'; 
 import ProductDetailPage from './pages/ProductDetailPage'; 
+import ProductsPage from './pages/ProductsPage';
 import './styles.css';
 
 const App = () => {
