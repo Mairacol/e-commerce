@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Mairacol/e-commerce/static/css/main.c8fd9dda.css",
-    "main.js": "/Mairacol/e-commerce/static/js/main.3cba9091.js",
-    "static/js/453.0297a6b4.chunk.js": "/Mairacol/e-commerce/static/js/453.0297a6b4.chunk.js",
-    "index.html": "/Mairacol/e-commerce/index.html",
-    "main.c8fd9dda.css.map": "/Mairacol/e-commerce/static/css/main.c8fd9dda.css.map",
-    "main.3cba9091.js.map": "/Mairacol/e-commerce/static/js/main.3cba9091.js.map",
-    "453.0297a6b4.chunk.js.map": "/Mairacol/e-commerce/static/js/453.0297a6b4.chunk.js.map"
+    "main.css": "/e-commerce/static/css/main.c8fd9dda.css",
+    "main.js": "/e-commerce/static/js/main.3b485eec.js",
+    "static/js/453.0297a6b4.chunk.js": "/e-commerce/static/js/453.0297a6b4.chunk.js",
+    "index.html": "/e-commerce/index.html",
+    "main.c8fd9dda.css.map": "/e-commerce/static/css/main.c8fd9dda.css.map",
+    "main.3b485eec.js.map": "/e-commerce/static/js/main.3b485eec.js.map",
+    "453.0297a6b4.chunk.js.map": "/e-commerce/static/js/453.0297a6b4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c8fd9dda.css",
-    "static/js/main.3cba9091.js"
+    "static/js/main.3b485eec.js"
   ]
 }
