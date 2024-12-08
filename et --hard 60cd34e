@@ -1,0 +1,51 @@
+[33mf8760b0[m[33m ([m[1;36mHEAD -> [m[1;32mgh-pages[m[33m)[m HEAD@{0}: pull origin gh-pages: Merge made by the 'ort' strategy.
+[33m60cd34e[m HEAD@{1}: commit: Actualización antes de hacer build
+[33m3d1e17e[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m HEAD@{2}: checkout: moving from main to gh-pages
+[33m3d1e17e[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m HEAD@{3}: reset: moving to gh-pages
+[33m7df86ff[m HEAD@{4}: checkout: moving from gh-pages to main
+[33m3d1e17e[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m HEAD@{5}: reset: moving to 3d1e17e
+[33m7df86ff[m HEAD@{6}: pull origin gh-pages: Fast-forward
+[33m3d1e17e[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m HEAD@{7}: checkout: moving from gh-pages to gh-pages
+[33m3d1e17e[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m HEAD@{8}: checkout: moving from main to gh-pages
+[33m7df86ff[m HEAD@{9}: reset: moving to origin/gh-pages
+[33m7df86ff[m HEAD@{10}: reset: moving to origin/gh-pages
+[33m7df86ff[m HEAD@{11}: pull origin gh-pages: Fast-forward
+[33m368e289[m HEAD@{12}: checkout: moving from gh-pages to main
+[33m3d1e17e[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m HEAD@{13}: commit: deploy
+[33m779e120[m HEAD@{14}: commit (merge): Resolve merge conflicts
+[33m03d53a3[m HEAD@{15}: checkout: moving from main to gh-pages
+[33m368e289[m HEAD@{16}: checkout: moving from gh-pages to main
+[33m03d53a3[m HEAD@{17}: commit: Deploy to GitHub Pages
+[33m368e289[m HEAD@{18}: checkout: moving from main to gh-pages
+[33m368e289[m HEAD@{19}: commit: client eliminado
+[33mc04a891[m HEAD@{20}: commit: simulacion de pago
+[33mbd45150[m HEAD@{21}: commit: carrito traducido
+[33m095ec3b[m HEAD@{22}: commit: app traducida
+[33m00eef2b[m HEAD@{23}: commit: react-slider aplicado
+[33m5010678[m HEAD@{24}: commit: searchbar and categorys
+[33m9825534[m HEAD@{25}: commit: animación a cards
+[33m1d9591e[m HEAD@{26}: commit: css añadir carrito eliminado
+[33m75d81ef[m HEAD@{27}: commit: añadir a carrito eliminado en productos
+[33m9719b01[m HEAD@{28}: reset: moving to 9719b01985db2ab65bdeb1390f7515b6fc2ea6bb
+[33m9719b01[m HEAD@{29}: checkout: moving from 9719b01985db2ab65bdeb1390f7515b6fc2ea6bb to main
+[33m9719b01[m HEAD@{30}: checkout: moving from main to 9719b01985db2ab65bdeb1390f7515b6fc2ea6bb
+[33m9719b01[m HEAD@{31}: commit: limpieza de cart y home
+[33m6df3665[m HEAD@{32}: commit: limpiando detail
+[33m7948cb6[m HEAD@{33}: commit: limpiando app.js
+[33m3d38387[m HEAD@{34}: commit: limpiand css
+[33m27eaa6b[m HEAD@{35}: commit: contador mas arriba
+[33m9052f82[m HEAD@{36}: commit: font parkisans global
+[33m06c283d[m HEAD@{37}: commit: react-select implementado
+[33m28eed94[m HEAD@{38}: commit: cards home modificadas
+[33m6a3ff5b[m HEAD@{39}: commit: detail de producto
+[33meb311b5[m HEAD@{40}: commit: carrito con contador estilizado
+[33m808393e[m HEAD@{41}: commit: carrito + contador
+[33md077e1a[m HEAD@{42}: commit: header y carrusel
+[33m02ed8fc[m HEAD@{43}: commit: banner creado y home aplicado
+[33mee3c7ed[m HEAD@{44}: commit: en proceso
+[33m01b0b50[m HEAD@{45}: commit: client creado
+[33mf6cf1ca[m HEAD@{46}: Branch: renamed refs/heads/main to refs/heads/main
+[33mf6cf1ca[m HEAD@{48}: commit: first commit
+[33m5034f2b[m HEAD@{49}: Branch: renamed refs/heads/main to refs/heads/main
+[33m5034f2b[m HEAD@{51}: Branch: renamed refs/heads/master to refs/heads/main
+[33m5034f2b[m HEAD@{53}: commit (initial): Initialize project using Create React App
