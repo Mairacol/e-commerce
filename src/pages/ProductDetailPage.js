@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ReactSelect from 'react-select';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const customStyles = {
     control: (base) => ({
@@ -11,27 +13,27 @@ const customStyles = {
         fontSize: '16px',
         boxShadow: 'none',  
         '&:hover': {
-            borderColor: '#d6b9b9',  
+            borderColor: '#d6b9b9',
         },
     }),
     option: (base) => ({
         ...base,
         padding: '10px',
         fontSize: '16px',
-        backgroundColor: '#fff',  
-        color: '#333',  
+        backgroundColor: '#fff',
+        color: '#333',
         '&:hover': {
-            backgroundColor: '#d6b9b9', 
-            color: '#fff', 
+            backgroundColor: '#d6b9b9',
+            color: '#fff',
         },
     }),
     singleValue: (base) => ({
         ...base,
-        color: '#333',  
+        color: '#333',
     }),
     placeholder: (base) => ({
         ...base,
-        color: '#d6b9b9', 
+        color: '#d6b9b9',
     }),
 };
 
@@ -43,34 +45,36 @@ const addToCart = (product, selectedSize, quantity, updateCartCount) => {
     const productExists = cart.find(item => item.id === product.id && item.selectedSize === selectedSize);
 
     if (productExists) {
-        // Si el producto ya está en el carrito, aumentamos la cantidad
-        productExists.quantity += quantity;
+        productExists.quantity += quantity; // Si ya está, actualizamos la cantidad
     } else {
-        // Si no está en el carrito, lo agregamos con la talla seleccionada y la cantidad
-        cart.push({ ...product, quantity, selectedSize });
+        cart.push({ ...product, quantity, selectedSize }); // Lo agregamos al carrito
     }
 
-    // Guardamos el carrito actualizado
+    // Guardamos el carrito en localStorage
     localStorage.setItem('cart', JSON.stringify(cart));
 
-    // Calcular el total de productos en el carrito sumando las cantidades
+    // Calcular el total de productos en el carrito
     const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+    updateCartCount(totalItems); // Actualizar el contador global
 
-    // Actualizar el contador en App.js
-    if (updateCartCount) {
-        updateCartCount(totalItems);  // Pasa el total de productos al App.js
-    }
-
-    
-    alert('Producto agregado al carrito');
+    // Reemplazo del alert con toast
+    toast.success('¡Product added to cart!', {
+        position: 'top-right',
+        autoClose: 2000, 
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        theme: 'colored',
+    });
 };
 
 const ProductDetailPage = ({ updateCartCount }) => {
     const { productId } = useParams(); // Obtiene el ID del producto de la URL
     const [product, setProduct] = useState(null);
-    const [selectedSize, setSelectedSize] = useState(''); // Estado para la talla seleccionada
-    const [quantity, setQuantity] = useState(1); // Estado para la cantidad seleccionada
-    const [sizes, setSizes] = useState([]); // Estado para almacenar las tallas disponibles
+    const [selectedSize, setSelectedSize] = useState(''); // Talle seleccionado
+    const [quantity, setQuantity] = useState(1); // Cantidad seleccionada
+    const [sizes, setSizes] = useState([]); // Tallas disponibles
 
     useEffect(() => {
         const fetchProduct = async () => {
@@ -78,20 +82,22 @@ const ProductDetailPage = ({ updateCartCount }) => {
             const data = await response.json();
             setProduct(data);
 
-            // Si el producto es de ropa, agregamos las tallas
+            // Agregar tallas si es ropa
             if (data.category === "men's clothing" || data.category === "women's clothing") {
-                setSizes(['S', 'M', 'L', 'XL']); // Tallas 
+                setSizes(['S', 'M', 'L', 'XL']);
             }
         };
 
         fetchProduct();
     }, [productId]);
 
-    if (!product) return <p>Loading details...</p>; // Si el producto no se ha cargado, mostramos un mensaje
+    if (!product) return <p>Loading details...</p>;
+
     const sizeOptions = sizes.map(size => ({
         value: size,
         label: size,
     }));
+
     return (
         <div className="product-detail">
             <h2>{product.title}</h2>
@@ -99,7 +105,7 @@ const ProductDetailPage = ({ updateCartCount }) => {
             <p>{product.description}</p>
             <p>${product.price}</p>
 
-            {/* Si el producto es de ropa, mostramos el selector de talle */}
+            {/* Selector de talles */}
             {(product.category === "men's clothing" || product.category === "women's clothing") && (
                 <div>
                     <label>Size:</label>
@@ -115,17 +121,16 @@ const ProductDetailPage = ({ updateCartCount }) => {
 
             {/* Selector de cantidad */}
             <div className="quantity-container">
-    <button className="quantity-btn" onClick={() => setQuantity(quantity - 1)}>-</button>
-    <input
-        type="number"
-        value={quantity}
-        onChange={(e) => setQuantity(Math.max(1, e.target.value))}
-        min="1"
-        className="quantity-input"
-    />
-    <button className="quantity-btn" onClick={() => setQuantity(quantity + 1)}>+</button>
-</div>
-
+                <button className="quantity-btn" onClick={() => setQuantity(Math.max(1, quantity - 1))}>-</button>
+                <input
+                    type="number"
+                    value={quantity}
+                    onChange={(e) => setQuantity(Math.max(1, parseInt(e.target.value) || 1))}
+                    min="1"
+                    className="quantity-input"
+                />
+                <button className="quantity-btn" onClick={() => setQuantity(quantity + 1)}>+</button>
+            </div>
 
             {/* Botón para agregar al carrito */}
             <button

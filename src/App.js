@@ -5,6 +5,8 @@ import Home from './pages/Home';
 import ProductDetailPage from './pages/ProductDetailPage'; 
 import ProductsPage from './pages/ProductsPage';
 import './styles.css';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'; // Importar estilos para Toastify
 
 const App = () => {
   const [cartCount, setCartCount] = useState(0); // Estado para el número de productos en el carrito
@@ -54,7 +56,10 @@ const App = () => {
           element={<ProductDetailPage updateCartCount={setCartCount} />} 
         />
       </Routes>
+      <ToastContainer />
+      
     </Router>
+     
   );
 };
 
